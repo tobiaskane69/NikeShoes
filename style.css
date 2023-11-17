@@ -15,13 +15,30 @@ nav {
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
+.navbar a:hover{
+    padding-bottom: 0.3rem;
+    border-bottom: 3px solid white;
+}
+
+.navbar .active {
+    padding-bottom: 0.3rem;
+}
+
+
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: white;
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
     padding: 0 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 .logo-image {
@@ -65,7 +82,7 @@ nav a {
     align-items: flex-start;
     font-style: italic;
     color: black;
-    padding: 0rem 2rem;
+    /* padding: 0rem 2rem; */
 }
 
 .column-left h1 {
@@ -76,11 +93,11 @@ nav a {
 .column-left p {
     margin-bottom: 2rem;
     font-size: 1.5rem;
-    line-height: 1.5;
+    /* line-height: 1.5; */
 }
 
 button {
-    width: 200px;
+    width: 350px;
     padding: 15px 0;
     margin: 5px 0px;
     border-radius: 25px;
@@ -89,7 +106,6 @@ button {
     background: transparent;
     color: black;
     cursor: pointer;
-    
 }
 
 button:hover {
@@ -101,7 +117,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0rem 2rem;
+    /* padding: 0rem 2rem; */
 }
 
 .hero-image {
@@ -128,15 +144,19 @@ footer {
 #left-footer {
     margin-right: 5rem;
 }
+/* About */
 
-.mail, .facebook {
+
+/* Contact Us */
+
+.mail, .facebook, .instagram {
     text-decoration: none;
     color: black;
 }
 
-
-
-
+.mail:hover, .facebook:hover, .instagram:hover {
+    color: white;
+}
 
 
 
