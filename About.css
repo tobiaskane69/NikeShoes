@@ -32,7 +32,7 @@ nav { /* Header of webpage */
     padding: 0rem calc((100vw - 1300px) / 2);
 }
 
-nav a {
+nav a { /* navigation bar header */
     text-decoration: none;
     color: white;
     padding: 0 1.5rem;
@@ -59,74 +59,44 @@ nav a {
     text-transform: uppercase;
 }
 
-.hero { /* Background of webpage */
-    background: rgb(199, 199, 199);
+body {
+    background-color: rgb(199, 199, 199);
+    margin: 0;
+    padding: 0;
 }
 
-.hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 78vh;
-    padding: 3rem calc((100vw - 1300px) / 2);
+section {
+    padding: 2rem;
 }
 
-h2 { /* Nike word */
-    font-size: 1.5rem;
-}
-
-.column-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-style: italic;
-    color: black;
-}
-
-.column-left h1 { /* Just Do It */
-    margin-bottom: 1rem;
-    font-size: 3rem;
-}
-
-.column-left p {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.5; 
-}
-
-.column-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 2rem; 
-}
-
-button {
-    width: 350px;
-    padding: 15px 0;
-    margin: 5px 0px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid black;
-    background: transparent;
-    color: black;
-    cursor: pointer;
-}
-
-button:hover {
-    background: black;
+header {
     color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 10px;
 }
 
-.hero-image { /* size of nike shoes */
-    width: 150%;
-    height: 100%;
+section { /* Texts */
+    padding: 20px;
+    max-width: 800px;
+    margin: 10px auto;
+    background-color: rgb(199, 199, 199);
 }
 
-@media screen and (max-width: 768px) {
-    .hero-container {
-        grid-template-columns: 3fr;
-    }
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    color:black;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.7;
 }
 
 footer { /* Footer of webpage */
@@ -139,11 +109,10 @@ footer { /* Footer of webpage */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.7rem;
+    padding: 1.5rem;
 }
 
 #left-footer {
     margin-right: 5rem;
 }
-
 
