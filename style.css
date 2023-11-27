@@ -66,7 +66,7 @@ nav a {
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 78vh;
+    height: 83vh;
     padding: 3rem calc((100vw - 1300px) / 2);
 }
 
@@ -79,7 +79,6 @@ h2 { /* Nike word */
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-style: italic;
     color: black;
 }
 
@@ -101,6 +100,11 @@ h2 { /* Nike word */
     padding: 0rem 2rem; 
 }
 
+.hero-image { /* size of nike shoes */
+    width: 170%;
+    height: 90%;
+}
+
 button {
     width: 350px;
     padding: 15px 0;
@@ -118,10 +122,7 @@ button:hover {
     color: white;
 }
 
-.hero-image { /* size of nike shoes */
-    width: 150%;
-    height: 100%;
-}
+
 
 @media screen and (max-width: 768px) {
     .hero-container {
