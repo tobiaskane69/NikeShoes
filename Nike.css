@@ -17,11 +17,28 @@
     position: fixed;
 }
 
-.sidebar>h3{
+.home{
+    display: flex;
+    align-items: center;
+
+}
+
+.home>h3{
     color: black;
     padding-left: 40px;
     font-size: 200%;
     text-decoration: underline;
+}
+
+.home>a>img{
+    width: 45px;
+    height: 45px;
+    padding-left: 15px;
+}
+
+.home>a>img:hover{
+    transform: scale(1.1);
+
 }
 
 .filter{
@@ -101,7 +118,7 @@ button{
     margin-bottom: 20px;
 }
 
-.img-box{
+/*.img-box{
     width: 300%;
     height: 100px;
     display: flex;
@@ -110,14 +127,30 @@ button{
 }
 
 .images{
-    max-width: 200%;
-    max-height: 130%;
+    max-width: 300%;
+    max-height: 100px;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.img-box{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images{
+    margin-top: 70px;
+    width: 300px;
+    max-height: 200px;
     object-fit: cover;
     object-position: center;
 }
 
 .bottom{
-    margin-top: 20px;
+    margin-top: 90px;
     width: 100%;
     text-align: center;
     display: flex;
