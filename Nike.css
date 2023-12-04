@@ -5,7 +5,7 @@
     font-family: 'poppins', sans-serif;
 }
 
-.cointainer{
+.container{
     display: flex;
 }
 
@@ -23,14 +23,14 @@
 
 }
 
-.home>h3{
+.home>h3{ /* Nike Shoes Collection */
     color: black;
     padding-left: 40px;
     font-size: 200%;
     text-decoration: underline;
 }
 
-.home>a>img{
+.home>a>img{ /* home image */
     width: 45px;
     height: 45px;
     padding-left: 15px;
@@ -47,38 +47,61 @@
     font-size: 150%;
 }
 
-.filter h3{
+.filter h3{ /* Category filter text */
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.contant{
+.contant{ /* products position*/
     width: 75%;
     position: absolute;
     right: 0;
 }
 
-.header{
+#root{ 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 30px;
+}
+
+.header{ 
     display: flex;
     align-items: center;
     justify-content: center;
     height: 10vh;
     border-bottom: 1px solid #eee;
-    color: #222222;
+    color: #1a1a1a;
     background-color: #eee;
 }
 
-.header p{
+.header p{ /* Products Category Filter */
+    display: flex;
+    text-align: center;
+    padding-left: 40rem;
     font-size: 30px;
     font-weight: bold;
 }
 
-.fil-p{
+.logo-image { /* Nike logo */
+    align-items: center;
+    width: 10%;
+    height: 10%;
+    padding: 0 1rem;
+}
+
+.fil-p{ /* buttons and texts in category filter */
     padding: 15px 15px;
     background-color: white;
     margin: 7px 0;
     cursor: pointer;
     color: #333;
     text-align: justify;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
 .fil-p:hover{
@@ -97,16 +120,8 @@ button{
     text-align: center;
 }
 
-#root{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 30px;
-}
-
 .box{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -114,24 +129,9 @@ button{
     padding: 15px;
 }
 
-.box>h3{
+.box>h3{ /* margin box size */
     margin-bottom: 20px;
 }
-
-/*.img-box{
-    width: 300%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.images{
-    max-width: 300%;
-    max-height: 100px;
-    object-fit: cover;
-    object-position: center;
-} */
 
 .img-box{
     width: 100%;
@@ -141,16 +141,17 @@ button{
     justify-content: center;
 }
 
-.images{
+.images{ /* product image */
     margin-top: 70px;
     width: 300px;
     max-height: 200px;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
 
-.bottom{
-    margin-top: 90px;
+.bottom{ /* product and price alignment */
+    margin-top: 100px;
     width: 100%;
     text-align: center;
     display: flex;
@@ -160,11 +161,37 @@ button{
     height: 70px;
 }
 
-h2{
-    font-size: 20px;
+h2{ /* price */
+    font-size: 25px;
     color: red;
 }
 
 button:hover{
     background-color: #333;
 }
+
+.popup-image { /* popup when clicked */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+  }
+  
+  .popup-image img{
+    position: absolute;
+    transition: all 2s linear;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #222222;
+    border-radius: 5px;
+    height: 900px;
+    width: 1300px;
+    object-fit: cover;
+    z-index: 300;
+    cursor: pointer;
+    
+  }

@@ -1,5 +1,8 @@
 const btns=[
-
+    {
+        id: 0,
+        name: 'All'
+    },
     {
         id: 1,
         name: 'Jordan'
@@ -20,6 +23,7 @@ const btns=[
         id: 5,
         name: 'Basketball'
     }
+
 ]
 
 const filters = [...new Set(btns.map((btn)=>
@@ -37,35 +41,35 @@ const product = [
         id: 1,
         image: 'images/jordan1.jpg',
         title: 'Air Jordan 1 Mid SE',
-        price: 137,
+        price: 7595,
         category: 'Jordan',
     },
     {
         id: 1,
         image: 'images/jordan2.jpg',
         title: 'Air Jordan 1 Elevate Low',
-        price: 128,
+        price: 7095,
         category: 'Jordan',
     },
     {
         id: 1,
         image: 'images/jordan3.jpg',
         title: 'Air Jordan 1 Low G',
-        price: 137,
+        price: 7895,
         category: 'Jordan',
     },
     {
         id: 1,
         image: 'images/jordan4.jpg',
         title: 'Air Jordan 1 Low SE',
-        price: 128,
+        price: 7095,
         category: 'Jordan',
     },
     {
         id: 1,
         image: 'images/jordan5.jpg',
         title: 'Air Jordan 1 Retro High OG',
-        price: 178,
+        price: 9895,
         category: 'Jordan',
     },
 
@@ -73,35 +77,35 @@ const product = [
         id: 2,
         image: 'images/airmax1.jpg',
         title: 'Nike Air Max Pulse Roam',
-        price: 160,
+        price: 8895,
         category: 'Airmax',
     },
     {
         id: 2,
         image: 'images/airmax2.jpg',
         title: 'Nike Air Max Scorpion Flyknit',
-        price: 245,
+        price: 13595,
         category: 'Airmax',
     },
     {
         id: 2,
         image: 'images/airmax3.jpg',
         title: 'Nike Air VaporMax Moc Roam',
-        price: 212,
+        price: 11795,
         category: 'Airmax',
     },
     {
         id: 2,
         image: 'images/airmax4.jpg',
         title: 'Nike Tiempo Legend 10 Elite',
-        price: 221,
+        price: 12295,
         category: 'Airmax',
     },
     {
         id: 2,
         image: 'images/airmax5.jpg',
         title: 'Nike Air Max 97',
-        price: 146,
+        price: 9595,
         category: 'Airmax',
     },
 
@@ -109,35 +113,35 @@ const product = [
         id: 3,
         image: 'images/airforce1.jpg',
         title: 'Nike Air Force 1 07',
-        price: 99,
+        price: 1599,
         category: 'Airforce',
     },
     {
         id: 3,
         image: 'images/airforce2.jpg',
         title: 'Nike Air Force 1 LV8',
-        price: 90,
+        price: 8395,
         category: 'Airforce',
     },
     {
         id: 3,
         image: 'images/airforce3.jpg',
         title: 'Nike Air Force 1 Low Retro',
-        price: 151,
+        price: 8395,
         category: 'Airforce',
     },
     {
         id: 3,
         image: 'images/airforce4.jpg',
         title: 'Nike Air Force 1 07 Mid',
-        price: 112,
+        price: 6195,
         category: 'Airforce',
     },
     {
         id: 3,
         image: 'images/airforce5.jpg',
         title: 'Nike Air Force 1 PLT.AF.ORM',
-        price: 112,
+        price: 6195,
         category: 'Airforce',
     },
 
@@ -145,35 +149,35 @@ const product = [
         id: 4,
         image: 'images/running1.jpg',
         title: 'Nike Invincible 3',
-        price: 178,
+        price: 9895,
         category: 'Running',
     },
     {
         id: 4,
         image: 'images/running2.jpg',
         title: 'Nike Structure 25',
-        price: 133,
+        price: 7395,
         category: 'Running',
     },
     {
         id: 4,
         image: 'images/running3.jpg',
         title: 'Nike Alphafly 2',
-        price: 261,
+        price: 6261,
         category: 'Running',
     },
     {
         id: 4,
         image: 'images/running4.jpg',
         title: 'Nike Pegasus 40',
-        price: 114,
+        price: 14495,
         category: 'Running',
     },
     {
         id: 4,
         image: 'images/running5.jpg',
         title: 'Nike Pegasus 40 "Eliud Kipchoge"',
-        price: 114,
+        price: 7395,
         category: 'Running',
     },
 
@@ -181,35 +185,35 @@ const product = [
         id: 5,
         image: 'images/basketball1.jpg',
         title: 'LeBron XXI Dragon Pearl EP',
-        price: 196,
+        price: 10895,
         category: 'Basketball',
     },
     {
         id: 5,
         image: 'images/basketball2.jpg',
         title: 'Tatum 1 Home Team PF',
-        price: 124,
+        price: 6895,
         category: 'Basketball',
     },
     {
         id: 5,
         image: 'images/basketball3.jpg',
         title: 'Nike G.T. Jump 2 EP',
-        price: 185,
+        price: 9895,
         category: 'Basketball',
     },
     {
         id: 5,
         image: 'images/basketball4.jpg',
         title: 'Air Jordan XXXVIII PF',
-        price: 196,
+        price: 10895,
         category: 'Basketball',
     },
     {
         id: 5,
         image: 'images/basketball5.jpg',
         title: 'Giannis Immortality 3 EP',
-        price: 77,
+        price: 4295,
         category: 'Basketball',
     }
 ];
@@ -217,18 +221,21 @@ const product = [
 const categories = [...new Set(product.map((item)=>
     {return item}))]
 
-const filterItems = (a) => {
-    const flterCategories = categories.filter(item);
-    function item(value){
-        if(value.id==a){
-            return(
-                value.id
-            )
+    const filterItems = (a) => {
+        let filteredProducts;
+    
+        if (a === 0) {
+            // If the button clicked is "All", display all products
+            filteredProducts = product;
+        } else {
+            // filter products based on the category ID
+            filteredProducts = product.filter(item => item.id === a);
         }
+    
+        displayItem(filteredProducts);
     }
-    displayItem(flterCategories)
-}
 
+/* displays img, img-box, and price */
 const displayItem = (items) => {
     document.getElementById('root').innerHTML = items.map((item)=>
     {
@@ -240,7 +247,7 @@ const displayItem = (items) => {
             <img class= 'images' src=${image}></img>
             </div>
             <div class='bottom'>
-            <h2>$ ${price}</h2>
+            <h2>PHP ${price}</h2>                   
             <button></button>
             </div>
             </div>`)
@@ -248,4 +255,21 @@ const displayItem = (items) => {
 }
 displayItem(categories);
 
+/* popup image */
+document.addEventListener('click', function (event) {
+    /*Check if the clicked element is an image inside an element with the class 'img-box' */
+    if (event.target.closest('.img-box img')) {
+      var image = event.target.closest('.img-box img');
+  
+      /* Display the popup and set the image source */
+      document.querySelector('.popup-image').style.display = 'block';
+      document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+  
+    /* Check if the clicked element is the image inside the popup */
+    if (event.target.matches('.popup-image img')) {
+      /* Hide the popup */
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+  });
 
