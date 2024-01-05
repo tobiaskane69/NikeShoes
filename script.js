@@ -22,8 +22,31 @@ const btns=[
     {
         id: 5,
         name: 'Basketball'
-    }
-
+    },
+    {
+        id: 6,
+        name: 'White'
+    },
+    {
+        id: 7,
+        name: 'Black'
+    },
+    {
+        id: 8,
+        name: 'Blue'
+    },
+    {
+        id: 9,
+        name: 'Red'
+    },
+    {
+        id: 10,
+        name: 'Pink'
+    },
+    {
+        id: 11,
+        name: 'Gray'
+    },
 ]
 
 const filters = [...new Set(btns.map((btn)=>
@@ -37,13 +60,7 @@ document.getElementById('btns').innerHTML=filters.map((btn)=>{
 }).join('');
 
 const product = [
-    {
-        id: 1,
-        image: 'images/jordan1.jpg',
-        title: 'Air Jordan 1 Mid SE',
-        price: 7595,
-        category: 'Jordan',
-    },
+
     {
         id: 1,
         image: 'images/jordan2.jpg',
@@ -65,33 +82,13 @@ const product = [
         price: 7095,
         category: 'Jordan',
     },
-    {
-        id: 1,
-        image: 'images/jordan5.jpg',
-        title: 'Air Jordan 1 Retro High OG',
-        price: 9895,
-        category: 'Jordan',
-    },
 
-    {
-        id: 2,
-        image: 'images/airmax1.jpg',
-        title: 'Nike Air Max Pulse Roam',
-        price: 8895,
-        category: 'Airmax',
-    },
+
     {
         id: 2,
         image: 'images/airmax2.jpg',
         title: 'Nike Air Max Scorpion Flyknit',
         price: 13595,
-        category: 'Airmax',
-    },
-    {
-        id: 2,
-        image: 'images/airmax3.jpg',
-        title: 'Nike Air VaporMax Moc Roam',
-        price: 11795,
         category: 'Airmax',
     },
     {
@@ -109,25 +106,12 @@ const product = [
         category: 'Airmax',
     },
 
+
     {
         id: 3,
         image: 'images/airforce1.jpg',
         title: 'Nike Air Force 1 07',
         price: 1599,
-        category: 'Airforce',
-    },
-    {
-        id: 3,
-        image: 'images/airforce2.jpg',
-        title: 'Nike Air Force 1 LV8',
-        price: 8395,
-        category: 'Airforce',
-    },
-    {
-        id: 3,
-        image: 'images/airforce3.jpg',
-        title: 'Nike Air Force 1 Low Retro',
-        price: 8395,
         category: 'Airforce',
     },
     {
@@ -145,25 +129,12 @@ const product = [
         category: 'Airforce',
     },
 
+
     {
         id: 4,
         image: 'images/running1.jpg',
         title: 'Nike Invincible 3',
         price: 9895,
-        category: 'Running',
-    },
-    {
-        id: 4,
-        image: 'images/running2.jpg',
-        title: 'Nike Structure 25',
-        price: 7395,
-        category: 'Running',
-    },
-    {
-        id: 4,
-        image: 'images/running3.jpg',
-        title: 'Nike Alphafly 2',
-        price: 6261,
         category: 'Running',
     },
     {
@@ -183,13 +154,6 @@ const product = [
 
     {
         id: 5,
-        image: 'images/basketball1.jpg',
-        title: 'LeBron XXI Dragon Pearl EP',
-        price: 10895,
-        category: 'Basketball',
-    },
-    {
-        id: 5,
         image: 'images/basketball2.jpg',
         title: 'Tatum 1 Home Team PF',
         price: 6895,
@@ -204,19 +168,117 @@ const product = [
     },
     {
         id: 5,
-        image: 'images/basketball4.jpg',
-        title: 'Air Jordan XXXVIII PF',
-        price: 10895,
-        category: 'Basketball',
-    },
-    {
-        id: 5,
         image: 'images/basketball5.jpg',
         title: 'Giannis Immortality 3 EP',
         price: 4295,
         category: 'Basketball',
+    },
+
+    {
+        id: 6,
+        image: 'images/jordan3.jpg',
+        title: 'Air Jordan 1 Low G',
+        price: 7895,
+        category: 'White',
+    },
+    {
+        id: 6,
+        image: 'images/airmax5.jpg',
+        title: 'Nike Air Max 97',
+        price: 9595,
+        category: 'White',
+    },
+    {
+        id: 6,
+        image: 'images/airforce1.jpg',
+        title: 'Nike Air Force 1 07',
+        price: 1599,
+        category: 'White',
+    },
+    {
+        id: 6,
+        image: 'images/airmax5.jpg',
+        title: 'Nike Air Force 1 07 Mid',
+        price: 6195,
+        category: 'White',
+    },
+    {
+        id: 6,
+        image: 'images/airforce5.jpg',
+        title: 'Nike Air Force 1 PLT.AF.ORM',
+        price: 6195,
+        category: 'White',
+    },
+    {
+        id: 6,
+        image: 'images/running5.jpg',
+        title: 'Nike Pegasus 40 "Eliud Kipchoge"',
+        price: 7395,
+        category: 'White',
+    },
+
+    {
+        id: 7,
+        image: 'images/jordan4.jpg',
+        title: 'Air Jordan 1 Low SE',
+        price: 7095,
+        category: 'Black',
+    },
+    {
+        id: 7,
+        image: 'images/airmax2.jpg',
+        title: 'Nike Air Max Scorpion Flyknit',
+        price: 13595,
+        category: 'Black',
+    },
+    {
+        id: 7,
+        image: 'images/basketball3.jpg',
+        title: 'Nike G.T. Jump 2 EP',
+        price: 9895,
+        category: 'Black',
+    },
+    {
+        id: 7,
+        image: 'images/basketball5.jpg',
+        title: 'Giannis Immortality 3 EP',
+        price: 4295,
+        category: 'Black',
+    },
+
+    {
+        id: 8,
+        image: 'images/airmax4.jpg',
+        title: 'Nike Tiempo Legend 10 Elite',
+        price: 12295,
+        category: 'Blue',
+    },
+
+    {
+        id: 9,
+        image: 'images/jordan2.jpg',
+        title: 'Air Jordan 1 Elevate Low',
+        price: 7095,
+        category: 'Red',
+    },
+
+    {
+        id: 10,
+        image: 'images/running4.jpg',
+        title: 'Nike Pegasus 40',
+        price: 14495,
+        category: 'Pink',
+    },
+
+    {
+        id: 11,
+        image: 'images/running1.jpg',
+        title: 'Nike Invincible 3',
+        price: 9895,
+        category: 'Gray',
     }
 ];
+
 
 const categories = [...new Set(product.map((item)=>
     {return item}))]
@@ -233,7 +295,7 @@ const categories = [...new Set(product.map((item)=>
         }
     
         displayItem(filteredProducts);
-    }
+    } 
 
 /* displays img, img-box, and price */
 const displayItem = (items) => {
